@@ -1,0 +1,224 @@
+:root {
+    --clr-primaryBg: #121212;
+    --clr-txtHighLight: #FFD465;
+    --clr-txtNeutral: white;
+    --clr-txtCTA: #65BEFF;
+    --ff-heading: 'Inter', Sans-serif;
+    --ff-primary: 'Open Sans', Sans-serif;
+}
+
+* {
+    border: 1px solid yellow;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;0,700;0,800;1,300;1,600&display=swap');
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ff-heading);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: var(--ff-primary);
+    font-weight: 500;
+    font-size: 1.5rem;
+    /* color: white; */
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    background-color: var(--clr-primaryBg);
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+    margin-top: 5.625rem;
+}
+
+button {
+    background-color: #65BEFF;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    width: 10.203125rem;
+    height: 2.46875;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.returnUp {
+    place-self: end;
+    position: sticky;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* //--base-style-structure------------end-1/ */
+
+
+/* //--header-fixed-nav---------------start--2// */
+
+.inline-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    background-color: #000000;
+    text-align: center;
+    height: 5.25rem;
+}
+
+nav {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    height: 5.25rem;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 2rem;
+}
+
+nav ul li {
+    font-size: 1.125rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+
+/* special headings------------------------------start--1.2 */
+
+main h1 {
+    display: flex;
+    justify-content: center;
+    color: var(--clr-txtHighLight);
+    margin-bottom: 1em;
+}
+
+.hFlex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#offsetTxtContainer {
+    display: flex;
+    width: 470px;
+    max-height: 50px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.whiteTxt {
+    color: white;
+}
+
+.blueTxt {
+    color: #65BEFF;
+    z-index: 10;
+}
+
+.positionedTxt {
+    align-self: flex-end;
+    margin-top: -19px;
+}
+
+
+/* special headings-------------------------------- */
+
+
+/* //--header-fixed-nav---------------end--2// */
+
+
+/* //--main-About-Me-----coded using flex--------start--3// */
+
+main {
+    padding: 3rem, 0;
+}
+
+.flexContainer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+}
+
+.container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.container--row {
+    display: flex;
+    flex-direction: column;
+}
+
+.container--narrow {
+    max-width: 28.375rem;
+}
+
+.centerFlex {
+    display: flex;
+    width: 100%;
+    justify-self: center;
+}
+
+#chevron {
+    align-self: center;
+}
+
+#contentAbout {
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+/* media query---------------------start------ */
+
+@media only screen and (max-width: 37.5rem) {
+    .container {
+        justify-content: center;
+    }
+}
