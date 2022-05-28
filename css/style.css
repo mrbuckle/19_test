@@ -8,7 +8,7 @@
 }
 
 * {
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -31,7 +31,7 @@ h1 {
 }
 
 h2 {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 2.25rem;
 }
 
@@ -47,6 +47,14 @@ p {
     /* color: white; */
 }
 
+.hClr1 {
+    color: var(--clr-txtHighLight);
+}
+
+.hClr2 {
+    color: var(--clr-txtCTA);
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -56,10 +64,15 @@ body {
     background-color: var(--clr-primaryBg);
     font-family: var(--ff-primary);
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.1125rem;
     color: white;
     margin-top: 5.625rem;
 }
+
+
+/* .sectionEndPadding {
+    padding-bottom: 10rem;
+} */
 
 button {
     background-color: #65BEFF;
@@ -68,8 +81,8 @@ button {
     font-weight: 600;
     width: 10.203125rem;
     height: 2.46875;
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: .625rem 1.25rem;
+    border-radius: .5rem;
 }
 
 .returnUp {
@@ -79,6 +92,8 @@ button {
     right: 20px;
     display: flex;
     justify-content: flex-end;
+    padding-right: 1rem;
+    z-index: 1000;
 }
 
 
@@ -108,7 +123,7 @@ header {
 
 nav {
     width: 100%;
-    background-color: #000000;
+    background-color: var(--clr-primaryBg);
     color: white;
     height: 5.25rem;
 }
@@ -132,9 +147,10 @@ nav ul li {
 
 main h1 {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     color: var(--clr-txtHighLight);
     margin-bottom: 1em;
+    padding-left: 9rem;
 }
 
 .hFlex {
@@ -175,6 +191,13 @@ main h1 {
 
 main {
     padding: 3rem, 0;
+    padding-right: 5rem;
+}
+
+.container--grandParent {
+    margin: 0 auto;
+    width: fit-content;
+    /* border: tomato solid 2px; */
 }
 
 .flexContainer {
@@ -186,7 +209,7 @@ main {
 
 .container {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     flex-wrap: wrap;
 }
 
@@ -199,14 +222,23 @@ main {
     max-width: 28.375rem;
 }
 
-.centerFlex {
-    display: flex;
-    width: 100%;
-    justify-self: center;
+#mainAnimation img {
+    height: 28.5rem;
+    object-fit: contain;
 }
 
 #chevron {
     align-self: center;
+}
+
+#chevron img {
+    max-width: 3.375rem;
+    max-height: 3rem;
+}
+
+.jello-horizontal {
+    -webkit-animation: jello-horizontal 0.9s infinite both;
+    animation: jello-horizontal 0.9s infinite both;
 }
 
 #contentAbout {
@@ -214,11 +246,587 @@ main {
     font-size: 1.5rem;
 }
 
+.container--row button {
+    align-self: flex-end;
+}
+
+
+/* new skils */
+
+.container--border {
+    border: var(--clr-txtCTA) solid 2px;
+    border-radius: 8px;
+    width: 17.9375rem;
+    padding: 1rem;
+}
+
+.imgCenter--flex {
+    align-self: center;
+}
+
+.txtCenter--flex {
+    align-self: center;
+    margin-bottom: 1em;
+}
+
+
+/* 
+work pages----coded with grid-------start--3------- */
+
+
+/* work styles and text styles ---------- */
+
+.workSum h2 {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    width: 375px;
+    margin: 32px;
+}
+
+.workSum p {
+    color: white;
+    width: 375px;
+    height: 436px;
+    margin: 32px 32px 16px 32px;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.workSum .yellowTxt {
+    color: #FFD465;
+    font-weight: 700;
+}
+
+.projectTitle {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.proj1-subHeadStyle {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.proj2-subHeadStyle {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.projBriefTxt {
+    color: white;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+#viewProjCta {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 12rem;
+    width: 203px;
+    height: 44px;
+}
+
+#viewProjCta button {
+    width: 163.25px;
+    height: 39.5px;
+}
+
+.txtEnd {
+    text-align: end;
+}
+
+
+/* my work grid -------------------------------------grid work here */
+
+#workGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "left middle right";
+}
+
+#leftWork {
+    grid-area: left;
+}
+
+#middleWork {
+    grid-area: middle;
+}
+
+#rightWork {
+    grid-area: right;
+    align-self: end;
+}
+
+#gridContainer1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "one two";
+    width: 851px;
+    height: 375px;
+    margin: 17px 1px 0 0;
+    padding: 1px 0 1px 1px;
+    border-radius: 8px;
+    border: solid 2px #77c2fb;
+}
+
+#gridContainer2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 189.5px;
+    grid-template-areas: "one two" "3 4";
+    width: 851px;
+    height: 375px;
+    margin: 17px 1px 0 0;
+    padding: 1px 0 1px 1px;
+    border-radius: 8px;
+    border: solid 2px #77c2fb;
+}
+
+.proj1-item1 {
+    grid-area: one;
+}
+
+.proj1-item2 {
+    grid-area: two;
+}
+
+
+/* #gridContainer1 button {
+align-self: end;
+} */
+
+
+/* My Work ccs grid ends */
+
+
+/* My Skills css flex starts*/
+
+#skillsHeader h1 {
+    color: #FFD465;
+    font-size: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 32px;
+}
+
+#mySkills .flexContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+#mySkills {
+    display: flex;
+    flex: wrap;
+}
+
+#mySkills>* {
+    flex-wrap: wrap;
+}
+
+.skillSum h2 {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    width: 375px;
+    margin: 32px;
+}
+
+.skillSum p {
+    color: white;
+    width: 375px;
+    height: 425px;
+    margin: 32px 32px 16px 32px;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.skillSum .yellowTxt {
+    color: #FFD465;
+    font-weight: 700;
+}
+
+.skillSum img {
+    width: 209px;
+    height: 210.1px;
+    display: flex;
+    margin: auto;
+    object-fit: contain;
+}
+
+.skillsListFlexContainer {
+    display: flex;
+}
+
+.uResearch {
+    margin: 2rem;
+}
+
+.uResearch img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.uResearch h3 {
+    color: white;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.uResearch ul {
+    color: white;
+    width: 375px;
+    height: 510px;
+    margin: 0.5px 16px 16px 16px;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.uDesign {
+    margin-top: 2rem;
+}
+
+.uDesign img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.uDesign h3 {
+    color: white;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.uDesign ul {
+    color: white;
+    width: 375px;
+    height: 510px;
+    margin: 0.5px 16px 16px 16px;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.webD {
+    margin: 2rem;
+}
+
+.webD img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 32px;
+    padding-bottom: 23px;
+}
+
+.webD h3 {
+    color: white;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.webD ul {
+    color: white;
+    width: 375px;
+    height: 510px;
+    margin: 0.5px 16px 16px 16px;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+}
+
+.tools {
+    margin: 2rem;
+}
+
+.tools img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.tools h3 {
+    color: white;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.tools ul {
+    color: white;
+    width: 375px;
+    height: 510px;
+    margin: 0.5px 16px 16px 16px;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+}
+
+
+/* My Skills ccs flex ends */
+
+
+/* my work grid and my skills flex media querry start---------------- */
+
+@media only screen and (max-width:1326px) {
+    .flexContainer {
+        flex-direction: column;
+        width: 100%;
+    }
+    #workGrid {
+        grid-template-rows: 616px 1350px 375px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "left" "middle" "right";
+        width: 100%;
+    }
+    #gridContainer1 {
+        grid-template-rows: 375px 375px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "one" "two";
+        width: 436px;
+        height: 755px;
+        margin: 2rem;
+    }
+    .proj1-item1 {
+        grid-area: one two;
+    }
+    #gridContainer2 {
+        grid-template-rows: 375px 375px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "one" "two";
+        width: 436px;
+        height: 755px;
+        margin: 2rem;
+    }
+    .proj2-item1 {
+        grid-area: one two;
+    }
+    .projBriefTxt {
+        margin: 1rem;
+    }
+    #viewProjCta {
+        margin-top: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 14rem;
+        width: 203px;
+        height: 44px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .flexContainer {
+        flex-direction: column;
+        width: 100%;
+    }
+    #workGrid {
+        grid-template-rows: 616px 1350px 375px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "left" "middle" "right";
+        width: 100%;
+    }
+    #gridContainer1 {
+        grid-template-rows: 375px 375px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "one" "two";
+        width: 436px;
+        height: 755px;
+        margin: 2rem;
+    }
+    .proj1-item1 {
+        grid-area: one two;
+    }
+    #gridContainer2 {
+        grid-template-rows: 375px 375px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "one" "two";
+        width: 436px;
+        height: 755px;
+        margin: 2rem;
+    }
+    .proj2-item1 {
+        grid-area: one two;
+    }
+    .projBriefTxt {
+        margin: 1rem;
+    }
+    #viewProjCta {
+        margin-top: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 14rem;
+        width: 203px;
+        height: 44px;
+    }
+    #rightWork img {
+        margin-left: 22.5rem
+    }
+}
+
+
+/* my work grid and my skills flex media querry end---------------- */
+
+
+/* about me media querry --------------------- */
+
+@media only screen and (max-width: 1372px) {
+    #altHeading {
+        display: block;
+        width: 100%;
+    }
+    #right,
+    #left img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #altHeading {
+        display: none;
+    }
+    #right,
+    #left img {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 953px) {
+    .hFlex {
+        padding-bottom: 3rem;
+    }
+}
+
 
 /* media query---------------------start------ */
 
-@media only screen and (max-width: 37.5rem) {
+@media only screen and (min-width: 1440px) {
+    main h1 {
+        margin-left: 10rem;
+    }
+    .flexContainer {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
     .container {
         justify-content: center;
+    }
+     :root {
+        font-size: .5rem;
+    }
+}
+
+
+/* 
+animations------------------------------------ */
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-5-27 20:26:57
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+
+/**
+ * ----------------------------------------
+ * animation jello-horizontal
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes jello-horizontal {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes jello-horizontal {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
     }
 }
