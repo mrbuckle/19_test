@@ -1,5 +1,5 @@
 :root {
-    --clr-primaryBg: #121212;
+    --clr-primaryBg: #0f0f0f;
     --clr-txtHighLight: #FFD465;
     --clr-txtNeutral: white;
     --clr-txtCTA: #65BEFF;
@@ -69,10 +69,13 @@ body {
     margin-top: 5.625rem;
 }
 
+main {
+    padding-bottom: 4rem;
+}
 
-/* .sectionEndPadding {
-    padding-bottom: 10rem;
-} */
+section {
+    padding-bottom: 4rem;
+}
 
 button {
     background-color: #65BEFF;
@@ -86,14 +89,22 @@ button {
 }
 
 .returnUp {
-    place-self: end;
     position: sticky;
     bottom: 20px;
-    right: 20px;
-    display: flex;
-    justify-content: flex-end;
+    float: right;
     padding-right: 1rem;
-    z-index: 1000;
+}
+
+#backTop img {
+    cursor: pointer;
+}
+
+#backTop {
+    transition: all 1s;
+}
+
+.dNone {
+    opacity: 0;
 }
 
 
@@ -116,14 +127,14 @@ header {
 }
 
 .logo {
-    background-color: #000000;
+    background-color: var(--clr-primaryBg);
     text-align: center;
     height: 5.25rem;
 }
 
 nav {
     width: 100%;
-    background-color: var(--clr-primaryBg);
+    background-color: rgba(18, 18, 18, .975);
     color: white;
     height: 5.25rem;
 }
@@ -140,6 +151,19 @@ nav ul li {
     font-size: 1.125rem;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    color: var(--clr-txtCTA);
+}
+
+nav ul li:active {
+    color: var(--clr-txtHighLight);
+}
+
+.selected {
+    color: var(--clr-txtCTA);
 }
 
 
@@ -189,11 +213,6 @@ main h1 {
 
 /* //--main-About-Me-----coded using flex--------start--3// */
 
-main {
-    padding: 3rem, 0;
-    padding-right: 5rem;
-}
-
 .container--grandParent {
     margin: 0 auto;
     width: fit-content;
@@ -234,6 +253,7 @@ main {
 #chevron img {
     max-width: 3.375rem;
     max-height: 3rem;
+    cursor: pointer;
 }
 
 .jello-horizontal {
@@ -267,6 +287,10 @@ main {
 .txtCenter--flex {
     align-self: center;
     margin-bottom: 1em;
+}
+
+.skillList {
+    margin-left: 1.25rem;
 }
 
 
